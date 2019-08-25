@@ -29,3 +29,5 @@ Run as a service... the easiest way to do that is using [go-serviceman](https://
 ```
 sudo serviceman add --system --path $PATH node index.js
 ```
+
+Boom. Automated MySQL backups every 24 hours.
