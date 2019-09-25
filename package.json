@@ -1,7 +1,7 @@
 {
   "name": "@ryanburnette/mysql-dump-s3-sync",
-  "version": "1.0.0",
-  "description": "Scheduled service that dumps a MySQL database and syncs it to an AWS S3 bucket every 24 hours.",
+  "version": "1.1.0",
+  "description": "Scheduled service that dumps a MySQL database and syncs it to an AWS S3.",
   "main": "index.js",
   "scripts": {
     "backup": "node index.js"

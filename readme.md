@@ -14,6 +14,7 @@ Set up the `.env`.
 
 ```
 # .env
+# all available options
 LOGGING=
 DB_HOST=
 DB_NAME=
@@ -22,6 +23,7 @@ DB_PASS=
 AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 AWS_BUCKET=
+CRON_SCHEDULE= # configure the cron schedule expression, default is 0 0 * * *
 ```
 
 Run as a service... the easiest way to do that is using [go-serviceman](https://git.coolaj86.com/coolaj86/go-serviceman).
@@ -30,4 +32,4 @@ Run as a service... the easiest way to do that is using [go-serviceman](https://
 sudo serviceman add --system --path $PATH node index.js
 ```
 
-Boom. Automated MySQL backups every 24 hours.
+Boom. Automated MySQL backups.

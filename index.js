@@ -1,13 +1,15 @@
 'use strict';
 
-require('dotenv').config({});
 var path = require('path');
 var fs = require('fs');
+if (fs.existsSync('.env')) {
+  require('dotenv').config({});
+}
 var promisify = require('util').promisify;
 var mkdirp = promisify(require('@root/mkdirp'));
 var exec = promisify(require('child_process').exec);
-var AWS = require('aws-sdk');
-var s3 = new AWS.S3({signatureVersion: 'v4'});
+var aws = require('aws-sdk');
+var s3 = new aws.S3({signatureVersion: 'v4'});
 var readFile = promisify(fs.readFile);
 var cron = require('node-cron');
 
@@ -16,6 +18,7 @@ var db_port;
 var db_user = process.env.DB_USER;
 var db_pass = process.env.DB_PASS;
 var db_name = process.env.DB_NAME;
+
 if (db_host.includes(':')) {
   var parts = db_host.split(':');
   db_host = parts[0];
@@ -98,6 +101,6 @@ function formatDate(date) {
   return require('date-fns/format')(date, 'YYYY-MM-DD');
 }
 
-cron.schedule('0 0 * * *', function() {
+cron.schedule(process.env.CRON_SCHEDULE || '0 0 * * *', function() {
   backup();
 });
