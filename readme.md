@@ -1,5 +1,8 @@
 # [mysql-dump-s3-sync][1]
 
+[![repo](https://img.shields.io/badge/repository-null-black.svg?style=flat-square)](gitea@code.ryanburnette.com:ryanburnette/mysql-dump-s3-sync)
+[![npm](https://img.shields.io/badge/package-NPM-green.svg?style=flat-square)](https://www.npmjs.com/package/@ryanburnette/mysql-dump-s3-sync)
+
 Dump a MySQL database and sync the backup to AWS S3.
 
 ## Usage
