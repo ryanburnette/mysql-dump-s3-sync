@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "gitea@code.ryanburnette.com:ryanburnette/mysql-dump-s3-sync.git"
+    "url": "https://github.com/ryanburnette/mysql-dump-s3-sync"
   },
   "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
   "license": "ISC",
