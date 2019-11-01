@@ -20,7 +20,7 @@ passed to `backup()`.
 ```
 # .env
 
-# Configure DB explicitly
+# Configure DB explicitly... or
 DB_HOST=
 DB_PORT=
 DB_NAME=
@@ -35,14 +35,14 @@ AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 AWS_BUCKET=
 
-# other
+# Other options
 LOGGING=
 ```
 
 Run a backup.
 
 ```bash
-npx @ryanburnette/mysql-dump-s3-sync backup
+npx backup
 ```
 
 Make it a scheduled service.
