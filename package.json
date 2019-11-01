@@ -1,22 +1,23 @@
 {
   "name": "@ryanburnette/mysql-dump-s3-sync",
-  "version": "1.1.0",
-  "description": "Scheduled service that dumps a MySQL database and syncs it to an AWS S3.",
+  "version": "2.0.0",
+  "description": "Dump a MySQL database and sync the backup to AWS S3.",
   "main": "index.js",
-  "scripts": {
-    "backup": "node index.js"
+  "bin": {
+    "backup": "./backup.js"
   },
   "repository": {
     "type": "git",
-    "url": "gitea@code.ryanburnette.com:ryanburnette/mysql-dump-s3-sync.git"
+    "url": "https://github.com/ryanburnette/mysql-dump-s3-sync"
   },
   "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
   "license": "ISC",
   "dependencies": {
     "@root/mkdirp": "^1.0.0",
+    "@ryanburnette/parse-mysql-url": "^1.1.0",
     "aws-sdk": "^2.517.0",
     "date-fns": "^1.30.1",
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "node-cron": "^2.0.3"
   }
 }
